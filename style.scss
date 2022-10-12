@@ -15,9 +15,19 @@ main{
 
 .card-body{
     background-color: rgba(135, 235, 246, 0.477);
-    min-width: 96vw;
-    min-height: 88vh;
     border-radius: 15px;
     
 }
 
+.input-card{
+    background-color: rgba(1, 221, 255, 0.03);
+    border-radius: 15px;
+    border: 2px solid rgba(160, 225, 160, 0.777);
+}
+
+.piechart-card{
+    background-color: inherit;
+    border-radius: 15px;
+    
+
+}
