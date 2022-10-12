@@ -1,0 +1,25 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(38, 9, 85);
+}
+
+.title {
+  color: rgba(154, 172, 162, 0.808);
+}
+
+.card-body {
+  background-color: rgba(135, 235, 246, 0.477);
+  border-radius: 15px;
+}
+
+.input-card {
+  background-color: rgba(1, 221, 255, 0.03);
+  border-radius: 15px;
+  border: 2px solid rgba(160, 225, 160, 0.777);
+}
+
+.piechart-card {
+  background-color: inherit;
+  border-radius: 15px;
+}/*# sourceMappingURL=style.css.map */
