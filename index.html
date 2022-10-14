@@ -6,14 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIP Calculator</title>
 
+  <!-- Pie chart using js -->
+  <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+
   <link href="styles/style.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
   <main>
     <!-- Heading Title -->
-    <div class="text-center text-decoration-underline">
-        <h1 class="title">SIP CALCULATOR</h1>
+    <div class="text-center">
+        <h1 class="display-1"><strong>SIP CALCULATOR</strong></h1>
     </div>
 
 
@@ -24,20 +28,19 @@
           <!-- User Input Card -->
           <div class="col-sm m-0 m-sm-2 m-md-3 m-lg-5 p-2 p-md-4 rounded input-card">
             <form class="form-horizontal" role="form">
-
               <label class="" for="">Amount Per Month</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <div class="input-group-text">₹</div>
                 </div>
-                <input type="number" name="amount" class="form-control" style="text-align:right" placeholder="Amount you would invest every month">
+                <input type="number" id="input-amt" name="input-amount" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="Amount you would invest every month">
               </div>
 
               <hr>
 
               <label class="" for="">Expected Yearly Return</label>
               <div class="input-group mb-2">
-                <input type="number" step="0.01" name="intrest" class="form-control" style="text-align:right" placeholder="Yearly Rate of Interest">
+                <input type="number" id="input-int" step="0.01" name="input-intrest" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="Yearly Rate of Interest">
                 <div class="input-group-append">
                   <div class="input-group-text">%</div>
                 </div>
@@ -47,29 +50,50 @@
 
               <label class="">Time Period</label>
               <div class="input-group mb-2">
-                <input type="number" name="time" class="form-control" style="text-align:right" placeholder="How long would you stay invested?">
+                <input type="number" id="input-time" name="input-time" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="How long would you stay invested?">
                 <div class="input-group-append">
-                  <div class="input-group-text ">Yr</div>
+                  <div class="input-group-text">Yr</div>
                 </div>
               </div>
-              
             </form>
-            <div class="flex">
-              <div>
 
-              </div>
-              <div>
+            <br>
 
+            <div class="summary border">
+              <div class="d-flex justify-content-between">
+                <div class="text-muted">Amount invested</div>
+                <div class="text-secondary">₹<span class="text-success" id="invested-val">0</span></div>
               </div>
-              <div>
-                
+              <div class="d-flex justify-content-between">
+                <div class="text-muted">Returns gained</div>
+                <div class="text-secondary">₹<span class="text-success" id="returns-val">0</span></div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="text-muted">Total value</div>
+                <div class="text-secondary">₹<span class="text-success" id="total-val">0</span></div>
               </div>
             </div>
           </div>
 
           <!-- Pie-chart Card -->
-          <div class="col-sm m-0 m-sm-2 m-md-3 m-lg-5 p-2 p-md-4 rounded piechart-card bg-black">
-            pie charts:-
+          <div class="col-sm m-0 m-sm-2 m-md-3 m-lg-5 p-2 p-md-4 rounded piechart-card bg-white border">
+            <!--
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <div class="w-50 h-50 bg-dark m-3 rounded"></div>
+                <span class="m-1">Amount invested</span>
+              </div>
+              <div class="d-flex">
+                <div class="w-50 h-50 bg-danger m-3 rounded"></div>
+                <span class="m-1">Returns gained</span>
+              </div>
+            </div>
+            -->
+
+            <!-- Pie Chart -->
+            <div class="container pie-chart shadow" id="pie-chart">
+
+            </div>
             
           </div>
         </div>
@@ -83,8 +107,12 @@
 
   </main>
 
+  <script type="text/javascript" src="scripts/calculation.js"></script>
+  <script type="text/javascript" src="scripts/chartapi.js"></script>
 
-
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- BootStrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  
 </body>
 </html>

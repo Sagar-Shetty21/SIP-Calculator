@@ -4,10 +4,13 @@
 main{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(38, 9, 85);
+    background-color: #ffe6f76f;
 }
 
-
+.display-1{
+    color: rgba(29, 33, 33, 0.29);
+    text-shadow: 3px 3px;
+}
 
 .title{
     color:rgba(154, 172, 162, 0.808);
@@ -29,7 +32,9 @@ main{
 .piechart-card{
     background-color: inherit;
     border-radius: 15px;
-    
+}
 
+.pie-chart{
+    height: 100%;
 }
 

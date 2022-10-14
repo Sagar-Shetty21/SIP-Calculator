@@ -1,7 +1,12 @@
 main {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(38, 9, 85);
+  background-color: rgba(255, 230, 247, 0.4352941176);
+}
+
+.display-1 {
+  color: rgba(29, 33, 33, 0.29);
+  text-shadow: 3px 3px;
 }
 
 .title {
@@ -22,4 +27,8 @@ main {
 .piechart-card {
   background-color: inherit;
   border-radius: 15px;
+}
+
+.pie-chart {
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
