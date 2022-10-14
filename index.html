@@ -28,19 +28,19 @@
           <!-- User Input Card -->
           <div class="col-sm m-0 m-sm-2 m-md-3 m-lg-5 p-2 p-md-4 rounded input-card">
             <form class="form-horizontal" role="form">
-              <label class="" for="">Amount Per Month</label>
+              <label class="" for="input-amt">Amount Per Month</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
                   <div class="input-group-text">₹</div>
                 </div>
-                <input type="number" id="input-amt" name="input-amount" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="Amount you would invest every month">
+                <input type="number" id="input-amt" step="100" name="input-amount" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="Amount you would invest every month" >
               </div>
 
               <hr>
 
-              <label class="" for="">Expected Yearly Return</label>
+              <label class="" for="input-int">Expected Yearly Return</label>
               <div class="input-group mb-2">
-                <input type="number" id="input-int" step="0.01" name="input-intrest" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="Yearly Rate of Interest">
+                <input type="number" id="input-int" step="0.01" name="input-intrest" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="Yearly Rate of Interest" >
                 <div class="input-group-append">
                   <div class="input-group-text">%</div>
                 </div>
@@ -48,9 +48,9 @@
 
               <hr>
 
-              <label class="">Time Period</label>
+              <label class="" for="input-time">Time Period</label>
               <div class="input-group mb-2">
-                <input type="number" id="input-time" name="input-time" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="How long would you stay invested?">
+                <input type="number" id="input-time" name="input-time" class="form-control" style="text-align:right" onkeyup="calculateSip(),chart()" placeholder="How long would you stay invested?" >
                 <div class="input-group-append">
                   <div class="input-group-text">Yr</div>
                 </div>
@@ -108,9 +108,8 @@
   </main>
 
   <script type="text/javascript" src="scripts/calculation.js"></script>
-  <script type="text/javascript" src="scripts/chartapi.js"></script>
+  <script type="text/javascript" src="scripts/anyChart.js"></script>
 
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <!-- BootStrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   
