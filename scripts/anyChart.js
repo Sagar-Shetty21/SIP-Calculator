@@ -16,10 +16,6 @@ function chart() {
     // display the chart in the container
     chart.container('pie-chart');
 
-
-
-
-
     chart.draw();
   
   }
